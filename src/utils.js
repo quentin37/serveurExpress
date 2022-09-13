@@ -5,7 +5,7 @@ module.exports = {
         type: "sqlite",
         database: "./wilders.sqlite",
         synchronize: true,
-        entities: [require("./entity/Wilders")],
+        entities: [require("./entity/Wilders"), require("./entity/Skill")],
       })
 
 }

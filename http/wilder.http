@@ -17,6 +17,7 @@ Content-Type: application/json
 {
     "idToDelete" : 1
 }
+
 ###
 
 PUT http://localhost:3000/api/wilder
@@ -26,3 +27,16 @@ Content-Type: application/json
     "idToUpdate" : 1,
     "content" : "billac"
 }
+
+###
+
+post http://localhost:3000/api/skill
+Content-Type: application/json
+
+{
+    "name" : "PHP"
+}
+
+###
+
+GET http://localhost:3000/api/skill
