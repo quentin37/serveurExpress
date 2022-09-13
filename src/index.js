@@ -11,7 +11,12 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.post('/api/wilder',wilderController.create)
+app.post('/api/wilder',wilderController.create) //create 
+app.put('/api/wilder',wilderController.update) //update
+app.delete('/api/wilder',wilderController.delete) // delete
+app.get('/api/wilder',wilderController.findAll) // select * from 
+
+
 
 const start = async () => {
   await dataSource.initialize();

@@ -2,5 +2,27 @@ post http://localhost:3000/api/wilder
 Content-Type: application/json
 
 {
-    "name" : "quentin billac",
+    "name" : "quentin billac"
+}
+
+###
+
+GET http://localhost:3000/api/wilder
+
+###
+
+DELETE http://localhost:3000/api/wilder
+Content-Type: application/json
+
+{
+    "idToDelete" : 1
+}
+###
+
+PUT http://localhost:3000/api/wilder
+Content-Type: application/json
+
+{
+    "idToUpdate" : 1,
+    "content" : "billac"
 }
