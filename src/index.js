@@ -16,6 +16,7 @@ app.post('/api/wilder',wilderController.create) //create
 app.put('/api/wilder',wilderController.update) //update
 app.delete('/api/wilder',wilderController.delete) // delete
 app.get('/api/wilder',wilderController.findAll) // select * from 
+app.post("/api/wilders/addSkill", wilderController.addSkill); // addSkill
 
 app.post('/api/skill',skillController.create) //create 
 app.put('/api/skill',skillController.update) //update
