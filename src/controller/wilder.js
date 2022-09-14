@@ -29,7 +29,7 @@ module.exports = {
     console.log(req.body);
     await dataSource
       .getRepository(wilder)
-      .update(req.body.id, { name: req.body.name });
+      .update(req.body.id, { name: req.body.name, description: req.body.description });
     res.send("Wilder Updated");
   },
   addSkill: async (req, res) => {

@@ -2,7 +2,8 @@ POST http://localhost:3000/api/wilders
 Content-Type: application/json
 
 {
-    "name": "Rest Client wilder"
+    "name": "lorem",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
 }
 
 ###
@@ -24,8 +25,9 @@ PUT http://localhost:3000/api/wilders
 Content-Type: application/json
 
 {
-    "id": 2,
-    "name": "new name"
+    "id": 1,
+    "name": "louis",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 }
 
 ###
@@ -34,6 +36,6 @@ POST http://localhost:3000/api/wilders/addSkill
 Content-Type: application/json
 
 {
-    "wilderName": "new name",
+    "wilderName": "quentin",
     "skillName": "Javascript"
 }
