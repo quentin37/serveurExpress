@@ -1,11 +1,11 @@
-const typeorm = require('typeorm');
+const typeorm = require("typeorm");
 
 module.exports = {
-    dataSource: new typeorm.DataSource({
-        type: "sqlite",
-        database: "./wilders.sqlite",
-        synchronize: true,
-        entities: [require("./entity/Wilders"), require("./entity/Skill")],
-      })
-
-}
+  dataSource: new typeorm.DataSource({
+    type: "sqlite",
+    database: "wildersdb.sqlite",
+    synchronize: true,
+    entities: [require("./entity/wilder"), require("./entity/skill")],
+    logging: ["query", "error"],
+  }),
+};

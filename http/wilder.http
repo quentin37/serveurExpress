@@ -1,42 +1,39 @@
-post http://localhost:3000/api/wilder
+POST http://localhost:3000/api/wilders
 Content-Type: application/json
 
 {
-    "name" : "quentin billac"
+    "name": "Rest Client wilder"
 }
 
 ###
 
-GET http://localhost:3000/api/wilder
+GET http://localhost:3000/api/wilders
 
 ###
 
-DELETE http://localhost:3000/api/wilder
+DELETE http://localhost:3000/api/wilders
 Content-Type: application/json
 
 {
-    "idToDelete" : 1
+    "idToDelete": 1
 }
 
 ###
 
-PUT http://localhost:3000/api/wilder
+PUT http://localhost:3000/api/wilders
 Content-Type: application/json
 
 {
-    "idToUpdate" : 1,
-    "content" : "billac"
+    "id": 2,
+    "name": "new name"
 }
 
 ###
 
-post http://localhost:3000/api/skill
+POST http://localhost:3000/api/wilders/addSkill
 Content-Type: application/json
 
 {
-    "name" : "PHP"
+    "wilderName": "new name",
+    "skillName": "Javascript"
 }
-
-###
-
-GET http://localhost:3000/api/skill
