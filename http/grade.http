@@ -1,8 +1,8 @@
-POST http://localhost:3000/api/grade
+POST http://localhost:5000/api/grade
 Content-Type: application/json
 
 {
     "grade": 10,
-    "wilderName": "Rest Client wilder",
-    "skillName": "Javascript"
+    "wilderName": "louis",
+    "skillName": "HTML"
 }

@@ -10,6 +10,7 @@ const app = express();
 const port = 5000;
 
 app.use(cors());
+app.use(express.json());
 
 app.post("/api/wilders", wilderController.create);
 app.delete("/api/wilders", wilderController.delete);
