@@ -1,11 +1,15 @@
 const express = require("express");
+const cors = require("cors");
 const dataSource = require("./utils").dataSource;
+
 const wilderController = require("./controller/wilder");
 const skillController = require("./controller/skill");
-const app = express();
-const port = 3000;
+const gradeController = require("./controller/grade");
 
-app.use(express.json());
+const app = express();
+const port = 5000;
+
+app.use(cors());
 
 app.post("/api/wilders", wilderController.create);
 app.delete("/api/wilders", wilderController.delete);
@@ -17,6 +21,8 @@ app.post("/api/skills", skillController.create);
 app.delete("/api/skills", skillController.delete);
 app.get("/api/skills", skillController.read);
 app.put("/api/skills", skillController.update);
+
+app.post("/api/grade", gradeController.create);
 
 const start = async () => {
   await dataSource.initialize();

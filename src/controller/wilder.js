@@ -4,7 +4,13 @@ const dataSource = require("../utils").dataSource;
 
 module.exports = {
   read: async (req, res) => {
-    const allWilders = await dataSource.getRepository(wilder).find();
+    const allWilders = await dataSource.getRepository(wilder).find({
+      relations: {
+        grades: {
+          skill: true,
+        },
+      },
+    });
     res.send(allWilders);
   },
   create: (req, res) => {
@@ -29,7 +35,7 @@ module.exports = {
     console.log(req.body);
     await dataSource
       .getRepository(wilder)
-      .update(req.body.id, { name: req.body.name, description: req.body.description });
+      .update(req.body.id, { name: req.body.name });
     res.send("Wilder Updated");
   },
   addSkill: async (req, res) => {
